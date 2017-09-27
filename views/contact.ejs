@@ -1,0 +1,46 @@
+<html>
+<style>
+body{
+
+  background-color: skyblue;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: verdana;
+  color:white;
+}
+form{
+  background-color: skyblue;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: verdana;
+  color:white;
+}
+strong{
+    text-shadow:  2px 2px #000000;
+  font-size: 400%;
+}
+h1{ margin-bottom: 5%;
+  font-size: 150%;
+
+}
+input,label{
+  text-align: center;
+
+}
+</style>
+<body>
+<strong>Compose Message</strong>
+
+<h1>Put your heart out and eat dosa</h1>
+<p></p>
+<form id="contact-form" method="post" action="/msg">
+  <label for="who">provide name security concerns<p></p>(aye!! just kidding)</label><br>
+<input type="text" name="who" value="<%= qs.name %>" style="border-radius:50px;"s><br>
+  <label for="to">Who is going to smile?</label><br>
+<input type="text" name="to" style="border-radius:50px;" value="<%= qs.dept %>"><br>
+  <label for="mssg">your Message</label><br>
+<textarea type="text" name="mssg" style="text-align:center; border-radius:50px;width:30%;hieght:100%;"></textarea><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
