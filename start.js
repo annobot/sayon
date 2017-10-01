@@ -22,12 +22,14 @@ server.get('/',function(req,res){
   });
 
   walker.on('end', function() {
+
       console.log(files);
+      res.render('in',qs={files});
+
   });
 
 
-res.render('in',qs={files});
-console.log(qs);
+//console.log(qs);
 });
 
 server.listen(process.env.PORT || 3000);
