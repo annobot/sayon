@@ -11,6 +11,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 server.set('view engine','ejs');
 server.use('/',express.static(__dirname + '/assets'));
+server.use('/about',express.static(__dirname + '/assets'));
 server.get('/',function(req,res){
   var walker  = walk.walk('./assets/slide/img', { followLinks: false });
 
@@ -30,6 +31,10 @@ server.get('/',function(req,res){
 
 
 //console.log(qs);
+});
+server.get('/about',function(req,res){
+
+  res.render('about');
 });
 
 server.listen(process.env.PORT || 3000);
