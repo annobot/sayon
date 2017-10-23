@@ -2,7 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylrsheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <head>
 
 <style>
@@ -26,96 +28,14 @@ height: 2% !important;}
 height: 2% !important;
 overflow: hidden !important;
 }
-.vac{
-  background-color: skyblue;
-  height: 100%;
-  width: 100%;
-
-}
-  #slides {
+#slides {
     margin-left: 12.5%;
         width: 75%;
     margin-top: 15px;
-    box-shadow: 0px 8px 8px #888888;
+    box-shadow: 0px 5px 15px #4569CF;
     display: none;
   }
 
-  #slides .slidesjs-navigation {
-    margin-top:5px;
-  }
-
-  a.slidesjs-next,
-  a.slidesjs-previous,
-  a.slidesjs-play,
-  a.slidesjs-stop {
-    background-image: url(img/btns-next-prev.png);
-    background-repeat: no-repeat;
-    display:block;
-    width:12px;
-    height:18px;
-    overflow: hidden;
-    text-indent: -9999px;
-    float: left;
-    margin-right:5px;
-  }
-
-  a.slidesjs-next {
-    margin-right:10px;
-    background-position: -12px 0;
-  }
-
-
-
-  a.slidesjs-previous {
-    background-position: 0 0;
-  }
-
-
-
-  a.slidesjs-play {
-    width:15px;
-    background-position: -25px 0;
-  }
-
-
-
-  a.slidesjs-stop {
-    width:18px;
-    background-position: -41px 0;
-  }
-
-
-
-  .slidesjs-pagination {
-    margin: 7px 0 0;
-    float: right;
-    list-style: none;
-  }
-
-  .slidesjs-pagination li {
-    float: left;
-    margin: 0 1px;
-  }
-
-  .slidesjs-pagination li a {
-    display: block;
-    width: 13px;
-    height: 0;
-    padding-top: 13px;
-    background-image: url(img/pagination.png);
-    background-position: 0 0;
-    float: left;
-    overflow: hidden;
-  }
-
-  .slidesjs-pagination li a.active,
-  .slidesjs-pagination li a:hover.active {
-    background-position: 0 -13px
-  }
-
-  .slidesjs-pagination li a:hover {
-    background-position: 0 -26px
-  }
 
   #slides a:link,
   #slides a:visited {
@@ -146,6 +66,7 @@ overflow: hidden !important;
 
   /* For tablets & smart phones */
   @media (max-width: 767px) {
+    body{background-image:url("b.jpg"); }
 #slides{  margin-left: 0%;
     width: 100%;}
 img{height: 100%;}
@@ -153,6 +74,7 @@ img{height: 100%;}
 
   /* For smartphones */
   @media (max-width: 480px) {
+    body{background-image:url("b.jpg"); }
   img{height: 100%;}
   #slides{  margin-left: 0%;
       width: 100%;}
@@ -160,6 +82,8 @@ img{height: 100%;}
 
   /* For smaller displays like laptops */
   @media (min-width: 768px) and (max-width: 979px) {
+    body{background-image:url("b.jpg");
+  background-size: cover;}
   img{height: 100%;}
   }
 
@@ -176,7 +100,7 @@ body {margin:0;}
 
   overflow: hidden;
   background-color: #333;
- box-shadow: 0px 10px 5px #888888;
+ box-shadow: 0px 5px 15px #4569CF;
 }
 
 .topnav a {
@@ -228,7 +152,7 @@ color:white;}
 </head>
 <header>
   <div class="topnav" id="myTopnav">
-    <div class="ori"><i class="fa fa-camera-retro fa-4x"></i><div style="color:white;font-family:lobster;"><a href="/">Pixel Dust</a></div>
+    <div class="ori"><div style="color:white;font-family:lobster;"><a href="/">Pixel Dust</a></div>
 </div>
     <a href="/">Home</a>
     <a href="#news">News</a>
@@ -256,14 +180,53 @@ function myFunction() {
 
 <div class="hi">
   <div id="slides">
-    <img src="slide/img/<%= qs.files[1] %>" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
-    <img src="slide/img/<%= qs.files[2] %>" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
-    <img src="slide/img/<%= qs.files[3] %>" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
-    <img src="slide/img/<%= qs.files[0] %>" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+    <img src="slide/img/<%= qs.files[1] %>" alt="Sayon Sen">
+    <img src="slide/img/<%= qs.files[2] %>" alt="Sayon Sen">
+    <img src="slide/img/<%= qs.files[3] %>" alt="Sayon Sen">
+    <img src="slide/img/<%= qs.files[0] %>" alt="Sayon Sen">
   </div>
-</div>
-<div style="margin-top:10%;text-align:center;font-family:lobster; font-size:100%;">Try to swipe Pics by sliding your finger over them.
-  <p></p>All Other Data Will Be Here</div>
+<style>
+  .big{
+   margin-left: 5%;
+  	  animation: flat 3s ease-in-out ;
+  	margin-top: 5%;
+  width:90%;
+  border-bottom-right-radius: 50px;
+   border-bottom-left-radius: 50px;
+
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    text-align: center;}
+    .tt{width: 100%;
+  text-align:center;
+    }
+    .oo{
+  background-color: rgba(0,0,0,0.5);
+      padding: 4px;
+      width:100px;height:100px;border-radius:50%;
+      animation: float 6s ease-in-out infinite;
+    }
+    .tweet{border-radius:50%;
+
+  height:80px;
+  width: 80px;
+    font-size:18px;
+    }
+    button{background-color:rgba(0, 0, 0, 0.3);}
+</style>
+  <div class="container">
+  <div class="big animated flipInX"><a href="http://www.twitter.com"><button class="tweet  btn btn-primary fa-spin ">
+    Twitter<i class="fa fa-twitter fa-spin" style="font-size:36px"></i>
+  </button></a>
+  <a href="http://www.facebook.com"><button class="tweet  btn btn-primary fa-spin ">
+    F-Book<i class="fa fa-facebook fa-spin" style="font-size:36px"></i>
+  </button></a>
+  <a href="http://www.instagram.com"><button class="tweet  btn btn-primary fa-spin ">
+    Insta<i class="fa fa-instagram fa-spin" style="font-size:36px"></i>
+  </button></a>
+  <p></p>
+  <div class="tt" style=" margin-left:2%; text-align:center;"> <strong>Pixel Dust</strong>
+</div></div></div>
+<div style="font-family:lobster; text-align:center;font-size:30px;margin-top:11%;">For Clicks Those Come Alive</div>
 <!-- End SlidesJS Required: Start Slides -->
 
 <!-- SlidesJS Required: Link to jQuery -->
