@@ -89,8 +89,11 @@ dai{margin-top:2px;}
   background-size: cover;}
   img{height: 80%;}
  dai{margin-top:2%;}
- }
+}
+@media (min-width: 978px) {
+   body{background-image:url("b.jpg");
 
+}
   /* For larger displays */
   @media (min-width: 1200px) {
    body{background-image:url("b.jpg");
@@ -234,7 +237,12 @@ function myFunction() {
 </div></div></div>
 <div class="dai" style="font-family:lobster; text-align:center;font-size:30px;margin-top:11%;">For Clicks Those Come Alive</div>
 <!-- End SlidesJS Required: Start Slides -->
-
+<style>
+  @media (min-width: 767px) {
+    .dai{margin-top:10px;}
+    .big{marin-top:20px;}
+    }
+</style>
 <!-- SlidesJS Required: Link to jQuery -->
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <!-- End SlidesJS Required -->
