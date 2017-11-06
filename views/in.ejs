@@ -131,6 +131,9 @@ body {margin:0;}
   display: none;
 }
 
+@media screen and (min-width: 600px) {
+body{background-image:url("b.jpg");}}
+
 @media screen and (max-width: 600px) {
 body{background-image:url("b.jpg");}
   .topnav a {display: none;}
@@ -142,6 +145,7 @@ body{background-image:url("b.jpg");}
 }
 
 @media screen and (max-width: 600px) {
+body{background-image:url("b.jpg");}
   .ori a {display:inline-flex; }
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -225,9 +229,11 @@ function myFunction() {
     .dai{font-family:lobster; text-align:center;font-size:30px;margin-top:11%;}
 </style>
 <style>
-  @media (min-width: 767px) {
-    .dai{margin-top:10px;}
+  @media (min-width: 600px) {
+body{background-image:url("b.jpg");}
+.dai{margin-top:10px;}
     .big{marin-top:20px;}
+    .tt{margin-left:0px;};
     }
 </style>
   <div class="container">
