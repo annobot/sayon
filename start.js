@@ -1,11 +1,11 @@
 var fs = require('fs');
-var multer = require('multer');
+
 var path =require('path');
 var express= require('express');
 var bodyParser = require('body-parser');
 var dir = require('node-dir');
 var walk    = require('walk');
-var bb = require('busboy');
+
 //var upload = require('express-fileupload');
 var files   = [];
 var im =[];
