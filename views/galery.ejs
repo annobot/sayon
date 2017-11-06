@@ -307,8 +307,8 @@ x=1;
 else{
 	$(".oo").animate({opacity: 0.6});
 	$(".oo").animate({opacity: 1});
-	window.location="http://pixel-dust.herokuapp.com/con/".delay(2000);
 
+window.open("http://pixel-dust.herokuapp.com/con/","_self").delay(3000);
 alert("Visit Contact Page for More Info");}
 
 
@@ -317,7 +317,7 @@ alert("Visit Contact Page for More Info");}
  });
 $('.container').on('click', function () {
 $(".container").css("background-color","rgba(225,225,225,0.4)");
-$(".container").css({height:"360px"});
+$(".container").css({height:""});
 $(".topnav").css({display:"block"});
 $(".up").css({animation:"",display:"block"});
  $(".oo").css("margin-top",23+ "px");
