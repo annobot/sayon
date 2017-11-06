@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<head>
+
+<style>
+
+*{padding: 0%;
+margin: 0%;
+}
+
+@keyframes fol {
+	0% {border-radius:90%;
+	}
+	100% {
+		border-radius:0px;
+	}
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+@keyframes fit {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-200px);
+	}
+}
+
+@keyframes flot {
+	0% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		margin-top: 500px;
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		margin-top: 20px;
+	}
+}
+@keyframes flat {
+	0% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(+120px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+body{background-image: url("about/back/mon.JPG");
+background-size: cover;
+
+}
+.up{
+
+  text-align: center;
+  margin-top:4%;
+  color:black;
+  text-outline: 2px 2px #ff0000;
+
+  width:auto;
+  font-family: lobster;
+  font-size: 300%;
+}
+header{
+  z-index: 10;
+
+}
+.ico{
+  color:white;
+  padding-left:2%;
+font-size: 80%;
+font-family:lobster;
+}
+//*{z-index:0;
+position: fixed;}*/
+.hi{
+
+  overflow: hidden !important;
+height: 2% !important;}
+.slidesjs-container{
+height: 2% !important;
+overflow: hidden !important;
+}
+  .navbar {
+    overflow: hidden
+  }
+
+</style>
+<!-- End SlidesJS Optional-->
+
+<!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+<style>
+
+  .container {
+    margin: 0 0;
+    padding: 2% 0 0 40%;
+
+  }
+
+  /* For tablets & smart phones */
+  @media (max-width: 767px) {
+    body{background-image:url('mob2.jpg');
+  background-size: cover;}
+  .container{padding: 0 0;
+}
+  }
+
+  /* For smartphones */
+  @media (max-width: 480px) {
+    body{background-image:url('mob2.jpg');
+  background-size: cover;}
+  .container{padding: 0 0;
+}
+  }
+
+  /* For smaller displays like laptops */
+  @media (min-width: 768px) and (max-width: 979px) {
+    .container{padding: 0 0;
+ }
+      body{background-image:url('mob2.jpg');
+    background-size: cover;}
+  }
+
+  /* For larger displays */
+  @media (min-width: 1200px) {  }
+
+</style>
+<style>
+body {margin:0;}
+
+.topnav {
+
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+.topnav a {
+  float: right;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 4px 6px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {display: none;}
+  .ori a {display:inline-flex; }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ori a {display:inline-flex; }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+.ori{display: inline-flex;
+color:white;}
+</style>
+</head>
+<header>
+  <div class="topnav" id="myTopnav">
+    <div class="ori"><div style="color:white;font-family:lobster;"><a href="/">Pixel Dust</a></div>
+</div>
+    <a href="/">Home</a>
+    <a href="#news">Galary</a>
+    <a href="#contact">Contact</a>
+    <a href="/about">About</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+</header>
+<body>
+<div class="vac"></div>
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<div class="up" style="top:0;possition:fixed;width:80%;margin-left:10%;box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);  animation: float 2s ease-in-out;">
+  Galary
+
+</div>
+<style>
+.ani{animation: fol 2s ease-in-out;}
+.container{margin-top: 20px;
+	overflow: hidden;
+	
+	padding-bottom: 10px;
+	background-color: rgba(225,225,225,0.4);
+	border-radius: 10px;
+	width: 94%;
+	margin-left: 3%;
+}
+
+  .tt{width: 75%;
+text-align:justify;
+  }
+  .oo{overflow: hidden;
+    margin-top: 23px;
+
+background-color: rgba(225,225,225,0.5);
+    padding: 8px;
+    height:100px;
+    animation: flot 2s ease-in-out;
+    width: 96%;
+    margin-left: 2% ;
+  }
+  .ig{height: auto;
+  width: 100%;}
+  .in{height: 86px;
+  overflow:hidden;}
+</style>
+
+<div class="container">
+<% for(var i=0; i < qs.im.length; i++) { %>
+  <div class="oo" >
+    <div class="in">
+    <img class="ig" src="<%=qs.im[i]%>">
+    </div>
+  </div>
+  <% } %>
+</div>
+
+
+
+<script>
+var ss = screen.height;
+var x=0;
+  $(document).ready(function functionName() {
+ $(".oo").click(function functionName() {
+	 if(x==0){
+ $(".oo").hide();
+ $(".up").hide();
+ $(".topnav").hide();
+ $(".oo").css("animation","none");
+ $(".container").height(ss + "px")
+ this.style.display = "flex";
+ this.style.height= "auto";
+ $(".container").css("margin-top","0px");
+ $(".oo").css("margin-top",ss/4.5 + "px");
+ $(".ig").height(200);
+ $(".in").height(200);
+
+ $(".oo").css("background-color","rgba(0,0,0,0.5)");
+ $(".oo").css('opacity','0.4');
+	$(".container").css("background-color","rgba(0,0,0,0.8)");
+	$(".oo").animate({opacity: 1,
+	"border-radius": "0px"});
+x=1;
+}
+else{
+	$(".oo").animate({opacity: 0.6});
+	$(".oo").animate({opacity: 1});
+
+alert("Visit Contact Page for More Info");}
+
+
+
+
+ });
+$('.container').on('click', function () {
+$(".container").css("background-color","rgba(225,225,225,0.4)");
+$(".container").css({height:"360px"});
+$(".topnav").css({display:"block"});
+$(".up").css({animation:"",display:"block"});
+ $(".oo").css("margin-top",23+ "px");
+ $(".ig").height(100);
+ $(".in").height(100);
+ $(".oo").css({display:"block"});
+ $(".container").css("margin-top","20px");
+alert("");
+
+
+
+}).children().on('click', function (event) {
+    event.stopPropagation();
+    //you can also use `return false;` which is the same as `event.preventDefault()` and `event.stopPropagation()` all in one (in a jQuery event handler)
+});
+});
+</script>
+
+<style>
+</style>
+
+<style>
+/*{z-index:0;}*/
+</style>
+</body>
+</html>
