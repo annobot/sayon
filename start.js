@@ -34,6 +34,10 @@ server.use(bodyParser.json());
 var upload = multer({ storage: Storage }).array("imgUploader", 3); //Field name and max count
 */
 //server.use(bb());
+server.get('/con',function(req,res){
+  res.render('contact');
+
+});
 server.get('/',function(req,res){
   var walker  = walk.walk('./assets/slide/img', { followLinks: false });
 
