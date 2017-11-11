@@ -1,46 +1,87 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-<style>
-body{
+<style media="screen">
+*{padding: 0 0;
+margin: 0 0;}
+  body{
+    background-color: skyblue;
 
-  background-color: skyblue;
-  text-align: center;
-  letter-spacing: 2px;
-  font-family: verdana;
-  color:white;
-}
-form{
-  background-color: skyblue;
-  text-align: center;
-  letter-spacing: 2px;
-  font-family: verdana;
-  color:white;
-}
-strong{
-    text-shadow:  2px 2px #000000;
-  font-size: 400%;
-}
-h1{ margin-bottom: 5%;
-  font-size: 150%;
+  }
+
+.for{
+  display: block;
 
 }
-input,label{
-  text-align: center;
 
+input{
+  width: 82%;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 3px inset rgba(40, 138, 127, 1) ;
+}
+  .container{
+    background-color: rgba(40, 138, 127, 0.7);
+    display: inline-block;
+    padding-top: 50px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    height: 400px;
+    margin-top: 10%;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+
+  }
+  .bou{font-weight:bold;
+    display: block;
+    padding-bottom: 10px;color: white;
+    text-shadow: 2px 5px 15px rgba(0,0,0,1);
+
+  }
+  textarea{
+padding: 3px;
+    width: 80%;
+  margin-left: 10;
+  resize: none;
+  border: 3px inset rgba(40, 138, 127, 1) ;
 }
 </style>
-<body>
-<strong>Compose Message</strong>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="container">
+   <form class="for" action="/data_recieved" method="post">
+<div class="bou">
 
-<h1>Put your heart out and eat dosa</h1>
-<p></p>
-<form id="contact-form" method="post" action="/msg">
-  <label for="who">provide name security concerns<p></p>(aye!! just kidding)</label><br>
-<input type="text" name="who" value="<%= qs.name %>" style="border-radius:50px;"s><br>
-  <label for="to">Who is going to smile?</label><br>
-<input type="text" name="to" style="border-radius:50px;" value="<%= qs.dept %>"><br>
-  <label for="mssg">your Message</label><br>
-<textarea type="text" name="mssg" style="text-align:center; border-radius:50px;width:30%;hieght:100%;"></textarea><br>
-<input type="submit" value="submit">
-</form>
-</body>
+  <label for="name">Enter Your Name</label>
+  <input type="text" id="name" name="name" placeholder="eg: Bhosidi Wala..">
+</div>
+<div class="bou">
+
+     <label for="ema">Enter Your Email</label>
+
+     <input id="ema" type="email" name="em" value="" placeholder="eg: bhosdi@wala.com">
+   </div>
+<div class="bou">
+
+
+     <label for="num">Enter Your mobile number</label>
+
+     <input  id="num" type="number" name="phone" value="" placeholder="only for Indian clients">
+   </div>
+  <div class="bou">
+
+     <label for="ms">Enter Your message</label>
+
+     <textarea  name="msg" id="ms"rows="8" cols="80" placeholder="Enter your Requirements..."></textarea>
+   </div>
+
+    <input style="width:20%; border-radius:50px;font-weight:bold;" type="submit" name="" value="Send">
+    <a href="tel:+919132701005"><button style="font-weight:bold;border: 3px inset rgba(40, 138, 127, 1) ;width:40%;height:30px;margin-left:60px; border-radius:50px;" type="button" name="button">Or Just Call Us</button></a>
+
+   </form>
+    </div>
+  </body>
 </html>
